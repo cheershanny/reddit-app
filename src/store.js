@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-//import reducers
+import redditReducer from "./features/Reddit/redditSlice";
 
 export default configureStore({
     reducer: {
-
+        reddit: redditReducer,
     },
 });
