@@ -1,5 +1,3 @@
-
-
 import axios from "axios";
 
 const CLIENT_ID = "QbPTetUHx_YuQ4ECj69d9Q";

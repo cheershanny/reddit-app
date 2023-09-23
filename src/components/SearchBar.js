@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 const SearchBar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const handleSearch = () => {
-    if (searchQuery.trim() !== "") {
-      onSearch(searchQuery);
-    }
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleSearch = (searchQuery) => {
+    const apiUrl = `https://www.reddit.com/r/${searchQuery}.json`;
+    
   };
 
   return (
