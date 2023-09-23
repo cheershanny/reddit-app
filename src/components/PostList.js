@@ -8,8 +8,8 @@ import {
   selectRedditLoading,
   selectRedditError,
 } from "../features/Reddit/redditSlice";
-import redditAPI from "../api-ATTENTION/redditAPI";
-import { authenticate } from "../api-ATTENTION/redditAPI";
+import redditAPI from "../api/redditAPI";
+import { authenticate } from "../api/redditAPI";
 import axios from "axios";
 
 const PostList = ({searchQuery}) => {

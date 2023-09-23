@@ -1,4 +1,4 @@
-//ATENTION: consider to simplify/reduce
+
 
 import axios from "axios";
 
