@@ -8,26 +8,35 @@ import {
   selectRedditLoading,
   selectRedditError,
 } from "../features/Reddit/redditSlice";
+import redditAPI from "../api-ATTENTION/redditAPI";
+import { authenticate } from "../api-ATTENTION/redditAPI";
+import axios from "axios";
 
-export default PostList = () => {
+const PostList = ({searchQuery}) => {
   const dispatch = useDispatch();
   const posts = useSelector(selectRedditPosts);
   const isLoading = useSelector(selectRedditLoading);
   const error = useSelector(selectRedditError);
 
+  
+
   useEffect(() => {
     dispatch(fetchPostsRequest());
 
-    //ATTENTION: add API call using Axios
-    setTimeout(() => {
-      try {
-        const APIdata = []; //ATTENTION: add API logic
-        dispatch(fetchPostsSuccess(APIdata));
-      } catch (error) {
-        //ATTENTION: add error handling logic
+    authenticate()
+      .then((accessToken) => {
+        axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+        return axios.get('https://www/reddit.com/r/reactjs.json') //to be replaced
+      })
+      .then((response) => {
+        const redditPosts = response.data.data.children.map(
+          (post) => post.data
+        );
+        dispatch(fetchPostsSuccess(redditPosts));
+      })
+      .catch((error) => {
         dispatch(fetchPostsFailure(error));
-      }
-    }, 2000);
+      });
   }, [dispatch]);
 
   return (
@@ -47,3 +56,5 @@ export default PostList = () => {
     </div>
   );
 };
+
+export default PostList;

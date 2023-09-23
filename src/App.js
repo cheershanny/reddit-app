@@ -1,11 +1,17 @@
 import "./styles/App.css";
+import PostList from "./components/PostList";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
     <div className="App">
-      <div className="content">
+      <header className="App-header">
         <h1>Redditiana App</h1>
-      </div>
+        <SearchBar />
+      </header>
+      <main>
+        <PostList />
+      </main>
     </div>
   );
 }
