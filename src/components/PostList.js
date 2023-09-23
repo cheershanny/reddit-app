@@ -8,7 +8,6 @@ import {
   selectRedditLoading,
   selectRedditError,
 } from "../features/Reddit/redditSlice";
-import redditAPI from "../api/redditAPI";
 import { authenticate } from "../api/redditAPI";
 import axios from "axios";
 
