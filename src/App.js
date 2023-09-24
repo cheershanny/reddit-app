@@ -1,15 +1,16 @@
+import React from "react"; 
 import "./styles/App.css";
-import PostList from "./components/PostList";
-import SearchBar from "./components/SearchBar";
+import PostList from "./features/postList/PostList";
+import SearchBar from "./features/searchBar/SearchBar";
 
 function App() {
-  const handleSearch = () => {}; //ATTENTION: implement handleSearch func
+  
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Redditiana App</h1>
-        <SearchBar onSearch={handleSearch}/>
+        <SearchBar /> 
       </header>
       <main>
         <PostList />

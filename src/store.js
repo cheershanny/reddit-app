@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import redditReducer from "./features/Reddit/redditSlice";
+import postListReducer from "./features/postList/postListSlice";
+import searchBarReducer from "./features/searchBar/searchBarSlice";
 
 export default configureStore({
     reducer: {
-        reddit: redditReducer,
+        postList: postListReducer,
+        searchBar: searchBarReducer,
     },
 });
