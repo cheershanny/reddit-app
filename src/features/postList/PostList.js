@@ -1,10 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 const PostList = () => {
-  const posts = useSelector((state) => {
-    console.log(state);
-    return state.postList.posts;
-  });
+  const posts = useSelector((state) => state.postList.posts);
   const isLoading = useSelector((state) => state.postList.isLoading);
   const error = useSelector((state) => state.postList.error);
 
