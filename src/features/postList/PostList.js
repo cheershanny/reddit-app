@@ -13,10 +13,10 @@ const PostList = () => {
   }
 
   return (
-    <ul role='list'>
+    <ul>
       {posts.map((post) => (
-        <li key={post.id} role="listitem">
-          <h2>{post.title}</h2>
+        <li key={post.id}>
+          {post.title}
         </li>
       ))}
     </ul>
