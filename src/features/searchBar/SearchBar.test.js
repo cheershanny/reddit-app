@@ -4,7 +4,7 @@ import {
   fireEvent,
   getByPlaceholderText,
 } from "@testing-library/react";
-import SearchBar from "../../src/features/searchBar/SearchBar";
+import SearchBar from "./SearchBar";
 import React from "react";
 
 test("renders without crashing", () => {

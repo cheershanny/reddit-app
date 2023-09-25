@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import PostList from '../../src/features/postList/PostList';
+import PostList from './PostList';
 import React from 'react';
 
 test('renders without crashing', () => {

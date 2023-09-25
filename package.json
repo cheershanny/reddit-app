@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.0",
     "babel-jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
@@ -21,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clear_jest": "jest --clearCache"
   },
   "eslintConfig": {
     "extends": [
@@ -42,16 +44,11 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.12.13",
-    "babel-jest": "^26.6.3",
-    "@babel/core": "^7.23.0",
-    "@babel/preset-react": "^7.22.15",
-    "jest": "^27.5.1"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0"
   },
   "jest": {
-    "testMatch": [
-      "**/__tests__/unit/**/*.test.js"
-    ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },
@@ -59,6 +56,14 @@
       "/node_modules/",
       "\\.css$"
     ],
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
