@@ -27,6 +27,8 @@ A simple Reddit search app built with React and Redux Toolkit that allows users 
 
 ## Currently working on: 
 
+- **Deployment:** Deploy the app to github page.
+
 - **Sorting and Filtering:** Allow users to sort and filter search results based on different criteria.
 
 - **Subreddit Details:** Display additional details about selected subreddits and individual posts.
