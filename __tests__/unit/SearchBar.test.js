@@ -5,6 +5,7 @@ import {
   getByPlaceholderText,
 } from "@testing-library/react";
 import SearchBar from "../../src/features/searchBar/SearchBar";
+import React from "react";
 
 test("renders without crashing", () => {
   render(<SearchBar />);
