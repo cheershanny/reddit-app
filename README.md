@@ -15,14 +15,15 @@ A simple Reddit search app built with React and Redux Toolkit that allows users 
 - **Error Handling:** Display error messages if there are issues with the API requests.
 
 ## Currently working on:
-- **Build test suit:** Implement unit tests and integration tests to ensure the reliability of the application.
+- **Mobile Responsiveness:** Make the app responsive for various screen sizes and devices.
 
 ## Pending Issues:
-- **Units Testing** [build-test-suite-branch]can not identify the React Redux context value.
+- **Units Testing:** Test suite [build-test-suite-branch] could not find react-redux context value. 
 
 ## Future development:
+- **Build test suit:** Implement unit tests and integration tests to ensure the reliability of the application.
 - **Deployment:** Deploy the app to github page.
 - **Sorting and Filtering:** Allow users to sort and filter search results based on different criteria.
 - **Subreddit Details:** Display additional details about selected subreddits and individual posts.
 - **Improved Styling:** Enhance the overall user interface and design for a more polished look.
-- **Mobile Responsiveness:** Make the app responsive for various screen sizes and devices.
+
