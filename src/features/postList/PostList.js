@@ -16,13 +16,13 @@ const PostList = () => {
   }
 
   return (
-    <div>
+    <ul role='list'>
       {posts.map((post) => (
-        <div key={post.id}>
+        <li key={post.id} role="listitem">
           <h2>{post.title}</h2>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
